@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+class Demo
+{
+    public:
+        int i;
+        int j;
+        static int x;
+        
+        Demo()
+        {
+            this-> i = 0;
+            this-> j = 0;
+        }
+
+        Demo(int a, int b)
+        {
+            this-> i = a;
+            this-> j = b;
+        }
+        void fun()
+        {
+            cout<<"Inside Gun\n";
+            cout<<"Value of i is : "<<this->i<<"\n";
+            cout<<"Value of j is : "<<this->j<<"\n";
+            cout<<"Value of x is : "<<x<<"\n";
+        }
+
+        static void Gun()
+        {
+             cout<<"Inside Gun\n";
+             cout<<i<<"\n";
+             cout<<j<<"\n";
+        }
+};
+
+int Demo :: x = 11;
+
+int main(){
+    Demo :: Gun();
+    cout<<"Value of x if : "<<Demo::x<<"\n";
+    
+    Demo :: dobj1(10,20);
+
+    
+    return 0;
+}
